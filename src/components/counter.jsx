@@ -7,15 +7,14 @@ class Counter extends Component {
 
     formatCount() {
         const { count } = this.state;
-
-    return count === 0 ? "Zero" : count;
+        return count === 0 ? "Zero" : count;
     }
 
     render() { 
         return ( 
             <React.Fragment>
-                <span>count: {this.formatCount()}</span>
-                <button>Increment</button>
+                <span className="badge badge-primary m-2">count: {this.formatCount()}</span>
+                <button className="btn btn-secondary btn-sm">Increment</button>
             </React.Fragment>
          );
     }
