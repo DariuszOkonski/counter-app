@@ -1,13 +1,22 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import Counter from './components/counter';
+import Counters from './components/counters';
+import Navbar from './components/navbar';
 
-function App() {
-  return (
-    <div className="App">
-      <Counter/>
-    </div>
-  );
+class App extends Component {
+  state = {  }
+
+  render() { 
+    return ( 
+      <React.Fragment>
+        <Navbar/>
+
+        <main className="container">
+          <Counters/>
+        </main>      
+    </React.Fragment>
+     );
+  }
 }
-
+ 
 export default App;
